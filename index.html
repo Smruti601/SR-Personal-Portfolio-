@@ -35,16 +35,58 @@
                 </div>
                 <div class="about_col_2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda possimus beatae repellat molestiae consectetur harum? Amet molestiae officia, fuga perspiciatis voluptatibus quam exercitationem veritatis inventore ratione. Quas eveniet blanditiis asperiores!</p>
+                    <p>
+                        I’m a Java Full Stack Developer passionate about creating dynamic and responsive web applications.
+                        I love solving complex problems and continuously learning new technologies.
+                    </p>
                     
                     <div class="tab_title">
-                        <div class="tab-links">Skill</div>
-                        <div class="tab-links">Experience</div>
-                        <div class="tab-links">Education</div>
+                        <div class="tab_links active_link" onclick="opentab('skill')">Skill</div>
+                        <div class="tab_links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab_links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab_contains active_tab" id="skill">
+                        <ul>
+                            <li><span>Java Full Stack Development</span><br>Spring Boot,Microservices,Docker,Kubernet,Kafka </li>
+                            <li><span>App development</span><br>Developing Android Applications</li>
+                            <li><span>Web Development</span><br>Developing Web Applicaions</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contains" id="experience">
+                        <ul>
+                            <li><span>No professional experience yet</span><br>
+                                Actively building projects and open to internship or full-time opportunities in Java Full Stack Development.
+                            </li>
+                        </ul>
+                    </div>
+                     
+                    <div class="tab_contains" id="education"> 
+                        <ul>
+                            <li><span>Bachalor Of Computer Application</span><br>Utkal University,Odisha,India</li>
+                            <li><span>Council Of Higher Secondary Education(CHSE)</span><br>Nayagarh Higher Secondary School,Nayagarh,Odisha,India</li>
+                            <li><span>Board Of Secondary Education</span><br>Kishore Chandra Nodal Vidyapitha,Gania,Nayagarh,Odisha,India</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontains = document.getElementsByClassName("tab_contains");
+    
+        function opentab(tabname){
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active_link");
+            }
+            for (let tabcontain of tabcontains) {
+                tabcontain.classList.remove("active_tab");
+            }
+            event.currentTarget.classList.add("active_link");
+            document.getElementById(tabname).classList.add("active_tab");
+        }
+    </script>
+    
 </body>
 </html>

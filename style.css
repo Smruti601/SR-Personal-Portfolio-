@@ -48,7 +48,7 @@ nav ul li a::after{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 nav ul li a:hover::after{
@@ -61,6 +61,7 @@ nav ul li a:hover::after{
 }
 .header-text h1{
     font-size: 60px;
+  
     margin-top: 20px;
 }
 .header-text h1 span{
@@ -71,7 +72,7 @@ nav ul li a:hover::after{
 /* About Section */
 #about{
       padding: 80px 0;
-      color: rgba(212, 207, 199, 0.71);  
+      color: rgb(240, 239, 238);  
 }
 .row{
     display: flex;
@@ -89,27 +90,54 @@ nav ul li a:hover::after{
 .about_col_2{
     flex-basis: 60%;
 }
+.about_col_2 p{
+    font-family: cursive;
+    margin-top: 10px;
+}
 .sub-title{
-    font-size: 60px;
-   
+    font-size: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
 }
 
 .tab_title{
-    
+    display: flex;
+    max-resolution: 20px 0 40px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.tab_links{
+    margin: 50px 50px 0 0 ;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: aliceblue;
+}
+.tab_links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab_links.active_link::after{
+    width: 100%;
+}
+.tab_contains ul li{
+    list-style:none;
+    margin: 30px 0;
+}
+.tab_contains ul li span{
+    color: #c40616;
+    font-size: 12px;
+}
+.tab_contains{
+    display: none;
+}
+.tab_contains.active_tab{
+    display: block;
+}
 
 
